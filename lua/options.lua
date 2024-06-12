@@ -13,6 +13,7 @@ o.cindent     = true
 
 o.colorcolumn = '81,121'
 -- o.cursorline  = true
+o.scrolloff   = 4
 
 ----> Tab
 o.tabstop     = 4    -- number of visual spaces per TAB
