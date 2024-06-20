@@ -10,7 +10,7 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
 local function optsfn(desc)
-  return { noremap = true, silent = true, desc = "horizonshd " .. desc }
+    return { noremap = true, silent = true, desc = "horizonshd " .. desc }
 end
 
 map({ 'n', 'i', 'v' }, '<C-j>', '10j', optsfn "Move down 10 rows")
@@ -47,4 +47,9 @@ map('n', '<C-Left>', ':vertical resize -2<cr>', optsfn "Decrease the window size
 map('n', '<C-Right>', ':vertical resize +2<cr>', optsfn "Increase the window size vertically")
 
 map('n', 'gh', vim.lsp.buf.hover,
-  optsfn "Display hover information about the symbol under ther cursor in a floating window")
+    optsfn "Display hover information about the symbol under ther cursor in a floating window")
+
+
+-- Using ufo provider need remap `zR` and `zM`. If Neovim is 0.6.1, remap yourself
+map('n', 'zR', require('ufo').openAllFolds, optsfn "Open all folds with nvim-ufo")
+map('n', 'zM', require('ufo').closeAllFolds, optsfn "Close all folds with nvim-ufo")

@@ -21,3 +21,10 @@ o.softtabstop = 0    --
 o.shiftwidth  = 0    -- number of spaces to use for each step of (auto)indent,
 -- when zero the 'tabstop' value will be used
 o.expandtab   = true -- tabs are spaces
+
+
+-- nvim-ufo
+o.foldcolumn = '1' -- '0' is not bad
+o.foldlevel = 99   -- Using ufo provider need a large value, feel free to decrease the value
+o.foldlevelstart = 99
+o.foldenable = true
