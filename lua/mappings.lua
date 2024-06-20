@@ -48,8 +48,3 @@ map('n', '<C-Right>', ':vertical resize +2<cr>', optsfn "Increase the window siz
 
 map('n', 'gh', vim.lsp.buf.hover,
     optsfn "Display hover information about the symbol under ther cursor in a floating window")
-
-
--- Using ufo provider need remap `zR` and `zM`. If Neovim is 0.6.1, remap yourself
-map('n', 'zR', require('ufo').openAllFolds, optsfn "Open all folds with nvim-ufo")
-map('n', 'zM', require('ufo').closeAllFolds, optsfn "Close all folds with nvim-ufo")
